@@ -10,13 +10,13 @@ type House struct {
 	Year         string `json:"year" form:"year" gorm:"type: varchar(255)"`
 	Area         string `json:"area" form:"area" gorm:"type: varchar(255)"`
 	Description  string `json:"description" form:"description" gorm:"type: varchar(255)"`
-	Status       string `json:"status" form:"status" gorm:"type: varchar(255)"`
-	Price        int    `json:"price" form:"price" gorm:"type: int"`
+	// Status       string `json:"status" form:"status" gorm:"type: varchar(255)"`
+	Price int `json:"price" form:"price"`
 
 	Tor int `json:"tor" form:"tor" gorm:"type: varchar(255)"`
 	// AmenitiesID  []int       `json:"amenitiesID"`
 	Amenities datatypes.JSON `json:"amenities" form:"amenities" gorm:"type: JSON"`
-	Bedroom   int            `json:"bedroom" form:"bedroom" gorm:"type: int"`
-	Bathroom  int            `json:"bathroom" form:"bathroom" gorm:"type: int"`
+	Bedroom   int            `json:"bedroom" form:"bedroom"`
+	Bathroom  int            `json:"bathroom" form:"bathroom"`
 	Image     string         `json:"image" form:"image" gorm:"type: varchar(255)"`
 }
