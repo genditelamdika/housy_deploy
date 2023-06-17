@@ -74,7 +74,7 @@ function Addhouse() {
       formData.set("addres", form.addres);
       formData.set("description", form.description);
       formData.set("year", form.year);
-      formData.set("area", Number(form.area));
+      formData.set("area", form.area);
       formData.set("price", Number(form.price));
       // formData.set("tor", Number(form.tor));   
       formData.set("bedroom", Number(form.bedroom));
@@ -200,9 +200,9 @@ function Addhouse() {
             <Form.Label className="fw-bold">Area</Form.Label>
             <Form.Select onChange={handleChange} className="" name="area" aria-label="Default select example">
               <option></option>
-              <option value="1500">1500 ft</option>
-              <option value="1800">1800 ft</option>
-              <option value="2000">2000 ft</option>
+              <option value="1500 ft">1500 ft</option>
+              <option value="1800 ft">1800 ft</option>
+              <option value="2000 ft">2000 ft</option>
             </Form.Select>
           </Form.Group>
 
