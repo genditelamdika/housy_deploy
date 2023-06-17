@@ -55,7 +55,7 @@ func (r *repository) UpdateTransaction(status string, orderId int) (models.Trans
 	if status != transaction.Status && status == "success" {
 		var house models.House
 		r.db.First(&house, transaction.House.ID)
-		// house.Status = house.Status + transaction.Status
+		house.Status = house.Status + "Di Sewa" + transaction.Status
 		// user.Subcribe = true
 		r.db.Save(&house)
 	}
