@@ -14,6 +14,8 @@ function Pay() {
     const [checkin, setTanggal1] = useState();
     const [checkout, setTanggal2] = useState();
     const [state, setState] = useContext(UserContext)
+
+    console.log("stateee",state)
     // const [jumlahProduk, setJumlahProduk] = useState(0);
     useEffect(() => {
         // Mengambil data totalHarga dari localStorage saat komponen Detail dipasang
@@ -236,7 +238,7 @@ function Pay() {
             </div>
             <div className="flex">
                 <p>1</p>
-                <p style={{marginLeft:"30px",color:"#959595"}}>nama</p>
+                <p style={{marginLeft:"30px",color:"#959595"}}>{state.user.addres}</p>
                 <p  style={{marginLeft:"30px",color:"#959595"}}>Man</p>
                 <p  style={{marginLeft:"30px",color:"#959595"}}>phone</p>
                 <h3  style={{marginLeft:"290px",fontWeight:"bold"}}>Long time Rent</h3>

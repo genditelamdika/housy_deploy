@@ -16,20 +16,24 @@ export default function Contendata(props) {
     return response.data.data;
   });
 
-  if (props.house != undefined) {
+  if (props.house !== undefined) {
     return (
       <>
-      <Row
+        <Row
           xs={3}
           md={3}
           className="g-3"
           style={{ marginTop: "0px", marginLeft: "0px", padding: "50px" }}
         >
-              {props.house?.map((item, index) => {
-                return (
-                    <Link className="text-decoration-none " to={`/Detail/${item.id}`}>                    
-                    <Col>
-                  <Card key={index} className="wc p-2 mb-1  d-flex selector-for-some-widget overflow-hidden gap-3">
+          {props.house?.map((item, index) => {
+            if (item.status === "SOLD") {
+              return null; // Tidak menampilkan card jika status sama dengan "SOLD"
+            }
+  
+            return (
+              <Link className="text-decoration-none " to={`/Detail/${item.id}`} key={index}>
+                <Col>
+                  <Card className="wc p-2 mb-1  d-flex selector-for-some-widget overflow-hidden gap-3">
                     <div className="position-absolute mt-3 ms-1 d-flex gap-2">
                       {item.amenities.map((amenity, idk) => (
                         <span key={idk} className="px-3 py-1 bg-white rounded-2 fs10">
@@ -37,7 +41,7 @@ export default function Contendata(props) {
                         </span>
                       ))}
                     </div>
-
+  
                     <Card.Img variant="dark" src={item.image} />
                     <Card.Body>
                       <Card.Title style={{ color: "black" }}>
@@ -50,26 +54,30 @@ export default function Contendata(props) {
                           cursor: "pointer",
                           color: "#555555",
                         }}
-                        >
+                      >
                         {item.bedroom} beds,{item.bathroom} bath, {item.area}Ft
                       </Card.Title>
                       <Card.Title
-                      style={{
-                        fontSize:"14px",
-                      }}
+                        style={{
+                          fontSize: "14px",
+                        }}
                       >
                         {item.city}
-
                       </Card.Title>
-
-
+                      <Card.Title
+                        style={{
+                          fontSize: "14px",
+                        }}
+                      >
+                        {item.status}
+                      </Card.Title>
                     </Card.Body>
                   </Card>
-                  </Col>
-                  </Link>
-                );
-              })}
-            </Row>
+                </Col>
+              </Link>
+            );
+          })}
+        </Row>
       </>
     );
   } else {
@@ -81,15 +89,19 @@ export default function Contendata(props) {
           className="g-3"
           style={{ marginTop: "0px", marginLeft: "0px", padding: "50px" }}
         >
-              {houses?.map((item, index) => {
-                return (
-                    <Link className="text-decoration-none " to={`/Detail/${item.id}`}>
-                <Col key={index} >
-                  <Card style={{ padding:"30px" }} className="wc p-2 mb-1  d-flex selector-for-some-widget overflow-hidden gap-3">
-                  <p className="text-decoration-none" style={{marginTop:"30px",position:"absolute",background:"white",borderRadius:"5px 0 0 5px",textAlign:"center"}}>{item.amenities}</p>
+          {houses?.map((item, index) => {
+            if (item.status === "SOLD") {
+              return null; // Tidak menampilkan card jika status sama dengan "sold"
+            }
+  
+            return (
+              <Link className="text-decoration-none " to={`/Detail/${item.id}`} key={index}>
+                <Col>
+                  <Card style={{ padding: "30px" }} className="wc p-2 mb-1  d-flex selector-for-some-widget overflow-hidden gap-3">
+                    <p className="text-decoration-none" style={{ marginTop: "30px", position: "absolute", background: "white", borderRadius: "5px 0 0 5px", textAlign: "center" }}>{item.amenities}</p>
                     <Card.Img variant="dark" src={item.image} />
                     <Card.Body>
-                      <Card.Title style={{ color: "black",fontWeight:"bold",fontFamily:"avenir" }}>
+                      <Card.Title style={{ color: "black", fontWeight: "bold", fontFamily: "avenir" }}>
                         Rp.{item.price}/{item.year}
                       </Card.Title>
                       <Card.Title
@@ -98,30 +110,34 @@ export default function Contendata(props) {
                           textDecoration: "none",
                           cursor: "pointer",
                           color: "black",
-                          fontWeight:"bold"
+                          fontWeight: "bold"
                         }}
-                        >
+                      >
                         {item.bedroom} beds,{item.bathroom} bath, {item.area}Ft
                       </Card.Title>
                       <Card.Title
-                      style={{
-                        fontSize:"14px",
-                      }}
+                        style={{
+                          fontSize: "14px",
+                        }}
                       >
                         {item.city}
-
                       </Card.Title>
-
-
+                      <Card.Title
+                        style={{
+                          fontSize: "14px",
+                        }}
+                      >
+                        {item.status}
+                      </Card.Title>
                     </Card.Body>
                   </Card>
                 </Col>
               </Link>
-                );
-              })}
-         </Row>       
+            );
+          })}
+        </Row>
       </>
     );
-  
-  } 
+  }
+   
 }

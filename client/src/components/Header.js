@@ -13,10 +13,10 @@ import action from "../images/action.png";
 import iconhous from "../image/Iconhous.png";
 import addpro from "../image/addpro.png";
 import bill from "../image/bill.png";
-import user from "../image/user.png";
+import userr from "../image/user.png";
 import address from "../image/address.png";
 import calendar from "../image/calendar.png";
-import logout from "../image/logout.png";
+import logoutt from "../image/logout.png";
 // import journey from "../images/journey.png";
 // import logout from "../images/logout.png";
 function Header({ filter, setFilter, handleOnSubmit}) {
@@ -153,7 +153,7 @@ function Header({ filter, setFilter, handleOnSubmit}) {
                     <Link to="/History">History </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className="bg-white">
-                    <img src={action} />
+                    <img src={userr} />
                     <Link to="/Profile">Profile </Link>
                   </Dropdown.Item>
                   
@@ -161,7 +161,7 @@ function Header({ filter, setFilter, handleOnSubmit}) {
               ) : (
                 <>
                   <Dropdown.Item>
-                    <img src={user} />
+                    <img src={userr} />
                     <Link to="/Profile">Profile</Link>
                   </Dropdown.Item>
                   <Dropdown.Item>
@@ -176,7 +176,7 @@ function Header({ filter, setFilter, handleOnSubmit}) {
                 style={{ padding: "10px" }}
                 onClick={logout}
               >
-                <img src={logout} />
+                <img src={logoutt} />
                 Logout
               </NavDropdown.Item>
             </Dropdown.Menu>
