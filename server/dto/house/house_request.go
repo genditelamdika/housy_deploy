@@ -16,7 +16,7 @@ type CreateHouseRequest struct {
 	Description  string         `json:"description" form:"description" gorm:"type: varchar(255)"`
 	Bedroom      int            `json:"bedroom" form:"bedroom" gorm:"type: int"`
 	Bathroom     int            `json:"bathroom" form:"bathroom" gorm:"type: int"`
-	Image        string         `json:"image" form:"image"`
+	Image        string         `json:"image" form:"image" gorm:"type: varchar(255)"`
 }
 
 type UpdateHouseRequest struct {

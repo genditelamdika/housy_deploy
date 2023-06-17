@@ -15,5 +15,5 @@ type HouseResponse struct {
 	Bathroom     int            `json:"bathroom" form:"bathroom" gorm:"type: int"`
 	Description  string         `json:"description" form:"description" gorm:"type: varchar(255)"`
 	Status       string         `json:"status" form:"status" gorm:"type: varchar(255)"`
-	Image        string         `json:"image" form:"image"`
+	Image        string         `json:"image" form:"image" gorm:"type: varchar(255)"`
 }
