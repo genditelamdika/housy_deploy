@@ -18,5 +18,5 @@ type House struct {
 	Amenities datatypes.JSON `json:"amenities" form:"amenities" gorm:"type: JSON"`
 	Bedroom   int            `json:"bedroom" form:"bedroom" gorm:"type: int"`
 	Bathroom  int            `json:"bathroom" form:"bathroom" gorm:"type: int"`
-	Image     string         `json:"image" form:"image"`
+	Image     string         `json:"image" form:"image" gorm:"type: varchar(255)"`
 }
