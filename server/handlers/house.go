@@ -55,7 +55,7 @@ func (h *handlerHouse) CreateHouse(c echo.Context) error {
 	fmt.Println("this is data file", dataFile)
 
 	// amenitiesid, _ := strconv.Atoi(c.FormValue("amenitiesid"))
-	tor, _ := strconv.Atoi(c.FormValue("tor"))
+	// tor, _ := strconv.Atoi(c.FormValue("tor"))
 	price, _ := strconv.Atoi(c.FormValue("price"))
 	bedroom, _ := strconv.Atoi(c.FormValue("bedroom"))
 	bathroom, _ := strconv.Atoi(c.FormValue("bathroom"))
@@ -69,10 +69,10 @@ func (h *handlerHouse) CreateHouse(c echo.Context) error {
 		Area:         c.FormValue("area"),
 		Description:  c.FormValue("description"),
 		Price:        price,
-		Tor:          tor,
-		Bedroom:      bedroom,
-		Bathroom:     bathroom,
-		Image:        dataFile,
+		// Tor:          tor,
+		Bedroom:  bedroom,
+		Bathroom: bathroom,
+		Image:    dataFile,
 	}
 
 	validation := validator.New()
@@ -106,10 +106,10 @@ func (h *handlerHouse) CreateHouse(c echo.Context) error {
 		Area:        request.Area,
 		Description: request.Description,
 		Price:       request.Price,
-		Tor:         request.Tor,
-		Bedroom:     request.Bedroom,
-		Bathroom:    request.Bathroom,
-		Image:       resp.SecureURL,
+		// Tor:         request.Tor,
+		Bedroom:  request.Bedroom,
+		Bathroom: request.Bathroom,
+		Image:    resp.SecureURL,
 	}
 
 	data, err := h.HouseRepository.CreateHouse(house)
@@ -144,7 +144,7 @@ func (h *handlerHouse) UpdateHouse(c echo.Context) error {
 	}
 
 	// amenitiesid, _ := strconv.Atoi(c.FormValue("amenitiesid"))
-	tor, _ := strconv.Atoi(c.FormValue("tor"))
+	// tor, _ := strconv.Atoi(c.FormValue("tor"))
 	price, _ := strconv.Atoi(c.FormValue("price"))
 	bedroom, _ := strconv.Atoi(c.FormValue("bedroom"))
 	bathroom, _ := strconv.Atoi(c.FormValue("bathroom"))
@@ -152,10 +152,10 @@ func (h *handlerHouse) UpdateHouse(c echo.Context) error {
 	request := housedto.UpdateHouseRequest{
 		Nameproperty: c.FormValue("nameproperty"),
 		// AmenitiesID:  amenitiesid,
-		City:     c.FormValue("city"),
-		Addres:   c.FormValue("addres"),
-		Price:    price,
-		Tor:      tor,
+		City:   c.FormValue("city"),
+		Addres: c.FormValue("addres"),
+		Price:  price,
+		// Tor:      tor,
 		Bedroom:  bedroom,
 		Bathroom: bathroom,
 		Image:    resp.SecureURL,
@@ -185,9 +185,9 @@ func (h *handlerHouse) UpdateHouse(c echo.Context) error {
 	if request.Price != 0 {
 		house.Price = request.Price
 	}
-	if request.Tor != 0 {
-		house.Tor = request.Tor
-	}
+	// if request.Tor != 0 {
+	// 	house.Tor = request.Tor
+	// }
 	if request.Bedroom != 0 {
 		house.Bedroom = request.Bedroom
 	}
@@ -254,9 +254,9 @@ func convertResponsehouse(u models.House) models.House {
 		Year:      u.Year,
 		Area:      u.Area,
 		Price:     u.Price,
-		Tor:       u.Tor,
-		Bedroom:   u.Bedroom,
-		Bathroom:  u.Bathroom,
-		Image:     u.Image,
+		// Tor:       u.Tor,
+		Bedroom:  u.Bedroom,
+		Bathroom: u.Bathroom,
+		Image:    u.Image,
 	}
 }
