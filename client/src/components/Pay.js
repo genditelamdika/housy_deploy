@@ -6,6 +6,9 @@ import { API } from "../config/api";
 import { UserContext } from "../context/userContext";
 import iconhous from "../image/Iconhous.png";
 import qrcode from "../images/qrcode.png"
+import checkinn from "../image/in.png"
+import checkoutt from "../image/out.png"
+import line from "../image/Line.png"
 import Navbars from "./Header"
 
 function Pay() {
@@ -151,11 +154,20 @@ function Pay() {
                 <img style={{position:"absolute",marginLeft:"680px"}} src={qrcode}></img>
                 <div style={{marginLeft:"0px",}}>
                 <h3 style={{fontSize:"25px",fontFamily:"Avenir",fontWeight:"bold"}}>{house?.nameproperty}</h3>
+
+                <div style={{height:"300px",position:"absolute",marginLeft:"277px"}}>
+                <img src={line}></img>
+</div>
   
       <div className="flex">
       <h3 style={{fontSize:"10px", width:"180px", fontWeight:"bold", height: "33px",fontFamily: 'Avenir',alignItems:"center"}}>{house?.addres}</h3>
       </div>
+      
+
       </div>
+<div style={{position:"absolute",marginLeft:"270px",marginTop:"15px"}}>
+                <img src={checkinn}></img>
+</div>
 
 
 
@@ -185,6 +197,10 @@ function Pay() {
                 <div style={{marginLeft:"0px",}}>
                 <p style={{color: "red", paddingTop:"10px",fontFamily:"Avenir",fontWeight:"bold"}}>Waiting Payment</p>
       </div>
+      
+      <div style={{position:"absolute",marginLeft:"270px"}}>
+                <img src={checkoutt}></img>
+</div> 
 
 
 
@@ -212,21 +228,9 @@ function Pay() {
 
 
             <div className="flex">
-                {/* <p style={{color:"#959595"}}>{item.trip.country.name}</ p> */}
-                {/* <p style={{marginLeft:"240px",color:"#959595"}}>{item.trip.datetrip}</p> */}
-                {/* <p style={{marginLeft:"50px",color:"#959595"}}>6 Day 4 Night</p> */}
-            {/* <img style={{position:"absolute",marginLeft:"680px"}} src={qrcode}></img> */}
+              
             </div>
-            {/* <div className="flex">
-                <h4 style={{marginLeft:"250px",  fontSize:"20px",fontFamily:"Avenir",fontWeight:"bold"}}>Acomadation</h4>
-                <h4 style={{marginLeft:"50px",  fontSize:"20px",fontFamily:"Avenir",fontWeight:"bold"}}>Transportasion</h4>
-            </div> */}
-
-            {/* <div className="flex">
-                <p style={{marginLeft:"310px",color:"#959595"}}>{item.trip.acommodation}</p>
-                <p style={{marginLeft:"60px",color:"#959595"}}>{item.trip.transportasion}</p>
-                <p style={{marginLeft:"130px",fontFamily:"Avenir",fontWeight:"bold",marginTop:"20px"}}>1518A29</p>
-            </div> */}
+           
             <div className="flex" >
                 <p >No</p>
                 <p style={{marginLeft:"40px",fontWeight:"bold"}}>Fullname</p>
@@ -238,12 +242,12 @@ function Pay() {
             </div>
             <div className="flex">
                 <p>1</p>
-                <p style={{marginLeft:"30px",color:"#959595"}}>{state.user.addres}</p>
+                <p style={{marginLeft:"30px",color:"#959595"}}>{state.user.fullname}</p>
                 <p  style={{marginLeft:"30px",color:"#959595"}}>Man</p>
-                <p  style={{marginLeft:"30px",color:"#959595"}}>phone</p>
+                <p  style={{marginLeft:"30px",color:"#959595"}}>{state.user.phone}</p>
                 <h3  style={{marginLeft:"290px",fontWeight:"bold"}}>Long time Rent</h3>
                 <h3  style={{marginLeft:"50px",fontWeight:"bold"}}>:</h3>
-                <h3  style={{marginLeft:"40px",fontWeight:"bold"}}>{house?.tor}</h3>
+                <h3  style={{marginLeft:"40px",fontWeight:"bold"}}>1</h3>
             </div>
             <div style={{ marginTop:"0",marginBottom:"0" }}>
                 <hr style={{ borderTop: "3px solid black" }} />

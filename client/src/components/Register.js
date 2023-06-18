@@ -74,8 +74,8 @@ const handleSubmit = useMutation(async (e) => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header  className="border-0" style={{ marginBottom: "-10px" }} closeButton>
-        <img style={{position:"absolute", marginTop:"50px"}} src={palm1}></img>
-          <Modal.Title>Register</Modal.Title>
+        {/* <img style={{position:"absolute", marginTop:"50px"}} src={palm1}></img> */}
+          <Modal.Title style={{color:"black", marginLeft:"200px"}}>Register</Modal.Title>
         </Modal.Header>
         <Modal.Body  className="mx-5">
         {message && message}
@@ -141,7 +141,7 @@ const handleSubmit = useMutation(async (e) => {
             </Form.Group>
 
         <Modal.Footer>
-          <Button  type="submit" className="loginn mx-0" style={{height:'45px'}} variant="warning" >
+          <Button  type="submit" className="loginn mx-0" style={{height:'45px'}} variant="primary" >
             Register
           </Button>
         </Modal.Footer>

@@ -30,7 +30,7 @@ const Modalbook = ({ show, onHide }) => {
 
     navigate(`/Pay/${id}`);
     // closeModal();
-    alert('Tanggal berhasil disimpan dalam LocalStorage.');
+    alert('Succes.');
   };
   return (
     <Modal show={show} onHide={onHide} centered>

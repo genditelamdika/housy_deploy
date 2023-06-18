@@ -83,7 +83,7 @@ function Login() {
 
   return (
     <div>
-      <Button className="" style={{width:"70px",height:"35px"}} variant="warning" onClick={() => setShowModal(true)}>
+      <Button className="" style={{width:"70px",height:"35px"}} variant="light" onClick={() => setShowModal(true)}>
         Login
       </Button>
 
@@ -117,7 +117,7 @@ function Login() {
                 onChange={handleChange}
               />
             </Form.Group>
-      <Button style={{height:'45px',marginTop:"30px"}}  type="submit" className="loginn mx-1 text-light" variant="warning" >
+      <Button style={{height:'45px',marginTop:"30px"}}  type="submit" className="loginn mx-1 text-light" variant="primary" >
         Login
       </Button>
           </Form>

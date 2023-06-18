@@ -2,8 +2,8 @@ import axios from 'axios';
 
 // Create base URL API
 export const API = axios.create({
-  // baseURL: process.env.REACT_APP_BASE_URL,
-  baseURL: "https://housydeploy-production.up.railway.app/api/v1/",
+  baseURL: process.env.REACT_APP_BASE_URL,
+  // baseURL: "https://housydeploy-production.up.railway.app/api/v1/",
   // baseURL: "http://localhost:5000/api/v1/",
 });
 

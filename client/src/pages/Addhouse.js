@@ -115,7 +115,7 @@ function Addhouse() {
       <div className="bg-white text-dark py-5" style={{ padding: "0px 170px" }}>
         <div className="flex">
 
-        <h5 className="fw-bold mb-5 ">Add Trip</h5>
+        <h5 className="fw-bold mb-5 ">Add Property</h5>
 
         </div>
         <Form className="secondary" onSubmit={(e) => handleSubmit.mutate(e)}>
