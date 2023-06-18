@@ -93,7 +93,7 @@ function Editprofile() {
                 style={{
                   background: "rgba(210, 210, 210, 0.25)",
                   height: "50px",
-                  color: "white",
+                  color: "black",
                   width: "600px"
                 }}
                 name="fullname"
@@ -111,7 +111,7 @@ function Editprofile() {
                 style={{
                   background: "rgba(210, 210, 210, 0.25)",
                   height: "50px",
-                  color: "white",
+                  color: "black",
                   width: "600px"
                 }}
                 name="email"
@@ -130,7 +130,7 @@ function Editprofile() {
                 style={{
                   background: "rgba(210, 210, 210, 0.25)",
                   height: "50px",
-                  color: "white",
+                  color: "black",
                   width: "600px"
                 }}
                 name="password"
@@ -149,7 +149,7 @@ function Editprofile() {
                 style={{
                   background: "rgba(210, 210, 210, 0.25)",
                   height: "50px",
-                  color: "white",
+                  color: "black",
                   width: "600px"
                 }}
                 name="phone"
@@ -172,7 +172,7 @@ function Editprofile() {
               marginBottom: "30px",
               resize: "none",
               height: "177px",
-              color: "white",
+              color: "black",
             }}
             id="address"
             name="address"
@@ -191,7 +191,7 @@ function Editprofile() {
                 padding: "8px 40px 8px 40px",
                 color: "yellow",
                 borderRadius: "6px",
-                border: "1px solid white",
+                border: "1px solid black",
                 fontSize: "14px",
                 fontWeight: "bold",
                 width: "330px",
