@@ -134,7 +134,7 @@ className=" d-flex align-items-center justify-content-center"
                 <p  style={{marginLeft:"30px",color:"#959595"}}>{data?.user?.phone}</p>
                 <h3  style={{marginLeft:"200px",fontWeight:"bold",color:"black"}}>Long time Rent</h3>
                 <h3  style={{marginLeft:"50px",fontWeight:"bold",color:"black"}}>:</h3>
-                <h3  style={{marginLeft:"40px",fontWeight:"bold",color:"black"}}>{data?.house?.tor}</h3>
+                <h3  style={{marginLeft:"40px",fontWeight:"bold",color:"black"}}>1</h3>
             </div>
             <div style={{ marginTop:"0",marginBottom:"0" }}>
                 <hr style={{ borderTop: "3px solid black" }} />

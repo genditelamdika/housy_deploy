@@ -72,7 +72,7 @@ function Transaction() {
                     <td className="text-dark">{item?.house?.nameproperty}</td>
                     <td className="text-dark">Bca.jpg</td>
                     {/* <td style={{ color: "green" }}>Approve</td> */}
-                    <td style={{ color: "green" }}>{status}</td>
+                    <td style={{ color: "green" }}>{item?.status}</td>
                     <td>
                       <button
                         style={{ border: "none" }}

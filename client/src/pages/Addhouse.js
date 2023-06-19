@@ -124,7 +124,6 @@ function Addhouse() {
             <Col md={12} lg={8} xl={9}>
               <Form.Control
                 type="text"
-                placeholder="nameproperty"
                 style={{
                   width: "1010px",
                   background: "",
@@ -168,7 +167,6 @@ function Addhouse() {
             <Col md={12} lg={8} xl={9}>
               <Form.Control
                 type="text"
-                placeholder="Transportatio"
                 style={{
                   width: "1010px",
                   background: "",
@@ -215,7 +213,6 @@ function Addhouse() {
                 color: "black",
               }}
               type="number"
-              placeholder="price"
               onChange={handleChange}
               name="price"
 
