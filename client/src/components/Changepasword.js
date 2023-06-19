@@ -59,7 +59,7 @@ function Changepasword(props){
         // navigate("/product-admin");
       } catch (error) {
   
-        alert("password lama kamu tidak salah")
+        alert("ah yang bener dong masukinnya")
         console.log(error);
       }
     });

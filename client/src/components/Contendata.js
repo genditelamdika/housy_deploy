@@ -52,13 +52,16 @@ export default function Contendata(props) {
                           fontSize: "14px",
                           textDecoration: "none",
                           cursor: "pointer",
-                          color: "#555555",
+                          color: "black",
+                          fontWeight: "bold"
                         }}
                       >
-                        {item.bedroom} beds,{item.bathroom} bath, {item.area}Ft
+                        {item.bedroom} beds,{item.bathroom} bath, {item.area}
                       </Card.Title>
                       <Card.Title
                         style={{
+                          color: "black",
+                          fontWeight: "bold",
                           fontSize: "14px",
                         }}
                       >
@@ -113,11 +116,13 @@ export default function Contendata(props) {
                           fontWeight: "bold"
                         }}
                       >
-                        {item.bedroom} beds,{item.bathroom} bath, {item.area}Ft
+                        {item.bedroom} beds,{item.bathroom} bath, {item.area}
                       </Card.Title>
                       <Card.Title
                         style={{
                           fontSize: "14px",
+                          color: "black",
+                          fontWeight: "bold"
                         }}
                       >
                         {item.city}
