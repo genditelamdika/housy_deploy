@@ -1,7 +1,5 @@
 import React from "react";
 import Col from "react-bootstrap/esm/Col";
-// import "../styles/style.css";
-// import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "react-query";

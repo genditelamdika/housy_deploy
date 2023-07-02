@@ -43,6 +43,7 @@ function Pay() {
   const [form, setForm] = useState({
     chekin: checkin,
     chekout: checkout,
+    url: `http://localhost:3000/Pay/${id}`,
     houseid: parseInt(id),
     total: house?.total,
     status: "waiting payment",
@@ -63,6 +64,7 @@ function Pay() {
         total: house?.price,
         chekin: checkin,
         chekout: checkout,
+        url: `http://localhost:3000/Pay/${id}`,
         // fullcounter: counterqty + fullcounter,
         status: "pendding",
         houseid: parseInt(id),
