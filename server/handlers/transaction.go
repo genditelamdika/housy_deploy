@@ -95,8 +95,10 @@ func (h *handlerTransaction) CreateTransaction(c echo.Context) error {
 		ID:      transactionId,
 		Chekin:  request.Chekin,
 		Chekout: request.Chekout,
+		Url:     request.Url,
 		UserID:  int(userId),
 		HouseID: request.HouseID,
+
 		// StartDate: Startdate,
 		// EndDate:   EndDate,
 		Total:  request.Total,

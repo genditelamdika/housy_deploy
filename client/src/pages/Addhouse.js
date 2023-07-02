@@ -69,7 +69,7 @@ function Addhouse() {
       // Store data with FormData as object
       const formData = new FormData();
       formData.set("nameproperty", form.nameproperty);
-      formData.append("amenities", JSON.stringify(form.amenities));
+      formData.append("amenities", JSON.stringify(form.amenities)); //mengkoncersi array menjdai string
       formData.set("city", form.city);
       formData.set("addres", form.addres);
       formData.set("description", form.description);

@@ -37,6 +37,7 @@ function Home() {
         (filter.bedroom === "" || house.bedroom === parseInt(filter.bedroom)) &&
         (filter.bathroom === "" || house.bathroom === parseInt(filter.bathroom)) &&
         (filter.amenities.length === 0 || filter.amenities.every((amenity) => house.amenities.includes(amenity)))
+        // Metode ini memeriksa apakah semua elemen dalam array filter.amenities memenuhi kondisi yang diberikan dalam fungsi callback.
       );
     });
     setHouse(filteredHouses);

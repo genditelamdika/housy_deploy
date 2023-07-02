@@ -8,6 +8,7 @@ type Transaction struct {
 	House   House  `json:"house"`
 	UserID  int    `json:"userid"`
 	User    User   `json:"user"`
+	Url     string `json:"url" form:"url" gorm:"type: varchar(255)"`
 	Total   int    `json:"total" form:"total"`
 	Status  string `json:"status" form:"status" gorm:"type: varchar(255)"`
 }

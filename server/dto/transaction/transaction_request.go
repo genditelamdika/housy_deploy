@@ -10,6 +10,7 @@ type CreateTransactionRequest struct {
 	UserID  int          `json:"userid"`
 	User    models.User  `json:"user"`
 	Total   int          `json:"total" form:"total" `
+	Url  string       `json:"url" form:"url" gorm:"type: varchar(255)"`
 	Status  string       `json:"status" form:"status" gorm:"type: varchar(255)"`
 }
 
@@ -21,5 +22,6 @@ type UpdateTransactionRequest struct {
 	UserID  int          `json:"userid"`
 	User    models.User  `json:"user"`
 	Total   int          `json:"total" form:"total" `
+	Url  string       `json:"url" form:"url" gorm:"type: varchar(255)"`
 	Status  string       `json:"status" form:"status" gorm:"type: varchar(255)"`
 }
