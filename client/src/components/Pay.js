@@ -64,7 +64,7 @@ function Pay() {
         total: house?.price,
         chekin: checkin,
         chekout: checkout,
-        url: `http://localhost:3000/Pay/${id}`,
+        url: `https://housy-deploy-one.vercel.app/Pay/${id}`,
         // fullcounter: counterqty + fullcounter,
         status: "pendding",
         houseid: parseInt(id),
@@ -172,7 +172,7 @@ function Pay() {
           <div className="flex">
             <div style={{position:"absolute",marginLeft:"680px"}}>
 
-            <QRCode value={`http://localhost:3000/Pay/${id}`} />
+            <QRCode value={`https://housy-deploy-one.vercel.app/Pay/${id}`} />
             </div>
             {/* <img style={{position:"absolute",marginLeft:"680px"}} src={qrcode}></img> */}
             <div style={{ marginLeft: "0px" }}>
